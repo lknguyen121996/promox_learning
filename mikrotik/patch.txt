@@ -1,0 +1,19 @@
+[admin@MikroTik] > system/license/print 
+  system-id: SdpAWSBF0LI
+      level: free       
+[admin@MikroTik] > system/telnet 127.0.0.1
+Connecting to 127.0.0.1
+Connected to 127.0.0.1
+Login: devel
+Password: 
+COLUMNS=252;LINES=70;export COLUMNS LINES;
+/flash/rw/disk # keygen
+Author:elseIf@live.cn
+System ID: SdpAWSBF0LI
+License Key:
+-----BEGIN MIKROTIK SOFTWARE KEY------------
+MmlOwm0XM230TqbWag4LeuD5yLXtkBdUsTTYZH4P2NIQ
+vpHBp2OlexoQGJdZ0fkzxFIgqqbtYzMtadXUm5BWBA==
+-----END MIKROTIK SOFTWARE KEY--------------
+RouterOS is now licensed
+/flash/rw/disk # 
