@@ -1,0 +1,26 @@
+To setup cloudlfare tunnel
+ - using proxmox script
+ - login your account
+ - create tunnel using script
+ - map tunnel to domain via web ui cloudlfare
+ - update config file using new tunnel UUID
+ - run to make sure it success
+ - update cloudflare.service follow this
+```
+[Unit]
+Description=cloudflared DNS-over-HTTPS (DoH) proxy
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/cloudflared tunnel --config /usr/local/etc/cloudflared/config.yml run
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+```
+This one is a MUST because who wrote systemctl is not clever
+Execstart mus include config file in the last with run
+-> this might be changed in the future so keep noting this
